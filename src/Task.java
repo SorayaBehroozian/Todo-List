@@ -1,16 +1,27 @@
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
+import java.io.Serializable;
+public class Task implements Serializable {
 
-public class Task {
 
+    /**
+     * Fields
+     */
     public  String item;
-    public  Date dueDate;
+    public  LocalDate dueDate;
     public  String taskDescription;
     public  String status;
 
+    /**
+     * Constructor, objects of this class's type will have the following parameters.
+     * @param item
+     * @param taskDescription
+     * @param dueDate
+     * @param status
+     */
 
-
-    public Task(String item, String taskDescription, Date dueDate, String status) {
+    public Task(String item, String taskDescription, LocalDate dueDate, String status) {
 
         this.item = item;
         this.dueDate = dueDate;
@@ -18,15 +29,18 @@ public class Task {
         this.status = status;
     }
 
-
+    /**
+     * set and get methods for each parameter.
+     * @param item
+     */
 
     public void setTask(String item) { this.item = item;}
     public String getTask() {
         return item;
     }
 
-    public void setDueDate(Date dueDate) { this.dueDate = dueDate; }
-    public Date getDueDate() {
+    public void setDueDate(LocalDate dueDate) { this.dueDate = dueDate; }
+    public LocalDate getDueDate() {
         return dueDate;
     }
 
