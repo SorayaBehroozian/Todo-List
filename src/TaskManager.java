@@ -231,15 +231,14 @@ public class TaskManager {
    }
 
     /**
-     * This method reads the file "supposedly" because it is not working rn.
+     * This method reads the file containing the tasks.
      */
        public void read () {
        try {
            FileInputStream fis = new FileInputStream("kn");
            ObjectInputStream ois = new ObjectInputStream(fis);
 
-           ArrayList<Task> tasks = (ArrayList<Task>) ois.readObject();
-           //Task task = (Task)ois.readObject();
+           this.tasks = (ArrayList<Task>) ois.readObject();
            ois.close();
            fis.close();
        }catch (IOException e) {
