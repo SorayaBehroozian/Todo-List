@@ -29,7 +29,7 @@ Once the code is run you see the following:
  - `<Press 4, To save and quit>`
 
 
-###Task List
+##Task List
 
 A printed message informs the user that she/he has the
 choice to sort tasks by title or by due date
