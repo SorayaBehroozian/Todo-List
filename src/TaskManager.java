@@ -1,18 +1,9 @@
-import java.util.*;
-import java.text.SimpleDateFormat;
+import java.io.*;
 import java.text.ParseException;
-import java.util.stream.Collectors;
-import java.io.FileWriter;
-import java.util.Date;
-import java.util.stream.Stream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.FileInputStream;
-import java.io.ObjectOutputStream;
-import java.io.ObjectInputStream;
-import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.*;
+import java.util.stream.Collectors;
 
 
 /**
@@ -84,7 +75,9 @@ public class TaskManager {
         Task newTask = new Task(item,taskDescription,dueDate,status);
         tasks.add(newTask);
     }
-
+    public int getListSize(){
+        return tasks.size();
+    }
 
     /**
      * This method removes a task that user has input the title of by searching through the tasks and finding a match.
